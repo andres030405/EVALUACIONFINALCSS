@@ -1,0 +1,175 @@
+/*DEFINIENDO ESTILOS GENERALES*/
+body{
+    width: 100%;
+    background-color: #02010a;
+    font-family: 'Dancing Script', cursive;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contenido{
+    width: 100%;
+    margin: auto;
+    animation: rebote 1.5s;
+}
+
+/*Animacion de carga de pagina*/
+@-webkit-keyframes rebote{
+    0%{
+        margin-top: 150%;
+    }
+    60%{
+        margin-top: -5%;
+    }
+    100%{
+        margin-top: 0%;
+    }
+}
+
+/*CABEZERA DE LA PAGINA WEB*/
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #5b7989;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+header h1{
+    text-align: center;
+    position: relative;
+    top: 25px;
+    left: 10px;
+    color: white;
+    text-shadow: 2px 2px #02010a;
+}
+header nav{
+    height: 100%;
+}
+
+header nav ul{
+    position: relative;
+    top: 30%;
+    left: 20%;
+    
+    float: none;
+}
+
+header nav ul li{
+    list-style: none;
+    margin-right: 30px;
+    display: inline;
+    height: 100%; 
+}
+
+header nav ul li a{
+    color: white;
+    text-decoration:underline;
+    font-weight:700;
+    font-size: 1.3em;
+}
+
+/*GALERIA DE IMAGENES*/
+#galeriaretratos{
+    margin: auto;
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+    
+    width: 100%;
+    height: auto;
+    background-color: #d5c75f; 
+    justify-content: center;/*MUY IMPORTANTE PARA QUE LA GALERIA SIEMPRE ESTE CENTRADA*/
+}
+#galeriaretratos .imagengaleria{
+    width: 100%;
+    height: auto;
+    margin: 40px;
+}
+#galeriaretratos .imagengaleria img{
+    width: 100%;
+    height: 100%;/*Con esta propiedades logramos que todas las imagenes tengan la misma altura*/
+    box-shadow: 2px 2px 0 #02010a;
+   -webkit-box-shadow: 2px 2px 0 #02010a;
+   -moz-box-shadow: 2px 2px 0 #02010a;
+}
+
+#galeriaretratos #imagen1{
+    -webkit-filter: blur(10px); /* Chrome, Safari, Opera */
+	filter: blur(10px);
+}
+
+#galeriaretratos #imagen2, #imagen4, #imagen6{
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+	filter: grayscale(100%);
+}
+
+#galeriaretratos #imagen3{
+    -webkit-filter: sepia(90%); /* Chrome, Safari, Opera */
+	filter: sepia(90%);
+}
+
+/*PIE DE PAGINA*/
+
+footer{
+    margin: auto;
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+    width: 100%;
+    height: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #C6d5c5;
+    font-weight:700;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    justify-content: center;
+}
+
+footer > div{
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 100%;
+    padding: 2%;
+}
+
+/*redes sociales del pie de pagina*/
+
+#redessociales > img{
+    width: 20px;
+    height: 20px;
+}
+
+
+/*APLICANDO EL DISEÑO ADAPTATIVO*/
+
+@media(min-width:900px){
+    .contenido{
+        width: 900px;
+    }
+    header nav ul{
+        top: 0%;
+        left: 0%;
+        float: right;
+    }
+    header h1{
+        text-align: left;
+    }
+    #galeriaretratos .imagengaleria{
+        width: 26%;
+        margin: 2%;
+    }
+    
+    footer > div{
+        padding-left: 2%;
+        padding-right: 2%;
+        width: 21%;
+    }
+    
+}

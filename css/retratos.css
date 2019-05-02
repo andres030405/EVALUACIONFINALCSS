@@ -12,7 +12,7 @@ body{
 .contenido{
     width: 100%;
     margin: auto;
-    animation: rebote 1.5s;
+    animation: rebote 3.5s;
 }
 
 /*Animacion de carga de pagina*/
